@@ -1,0 +1,85 @@
+# =============================================================================
+# Flutter / Dart
+#
+# Cross-platform rules only. Each platform keeps its own .gitignore next to it
+# (android/, ios/, macos/, linux/, windows/) covering things like
+# local.properties, signing material and ephemeral build folders.
+# =============================================================================
+
+# --- Miscellaneous -----------------------------------------------------------
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# --- Editors / IDEs ----------------------------------------------------------
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# .zed/ is deliberately NOT ignored: it holds the project-level Zed
+# configuration (debug.json, tasks.json, settings.json) that is meant to be
+# shared with everyone working on this repo. Keep anything machine-specific in
+# Zed's global configuration instead (`zed: open tasks`, `zed: open debug tasks`).
+
+# --- Flutter / Dart / pub ----------------------------------------------------
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# --- Generated code ----------------------------------------------------------
+# lib/objectbox-model.json and lib/objectbox.g.dart are produced by
+# build_runner but are committed on purpose:
+#   * lib/objectbox-model.json needs to be in version control - the file itself
+#     asks for this, because ObjectBox keeps the entity/property UIDs in it.
+#     Losing it reassigns those UIDs, which can drop existing user data.
+#   * lib/objectbox.g.dart is committed so a fresh clone builds without running
+#     codegen. Regenerate it after changing the entities with:
+#       dart run build_runner build --delete-conflicting-outputs
+# If other generators are added later (Freezed, json_serializable, ...), their
+# output can be ignored instead - uncomment the patterns below as needed:
+#**/*.g.dart
+#**/*.freezed.dart
+
+# --- Symbolication / obfuscation --------------------------------------------
+app.*.symbols
+app.*.map.json
+
+# --- Android -----------------------------------------------------------------
+# Gradle/Kotlin session output. See android/.gitignore for local.properties and
+# signing material, which must never be committed.
+.kotlin/
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# --- Widget preview ----------------------------------------------------------
+.widget_preview/
+
+# =============================================================================
+# Tracked on purpose - do not add these to .gitignore:
+#   pubspec.lock                                    lock file, applications commit it
+#   assets/                                         read-only exercise dataset
+#   .zed/                                           shared Zed configuration
+#   lib/objectbox-model.json, lib/objectbox.g.dart  see "Generated code" above
+# =============================================================================
+.zed/

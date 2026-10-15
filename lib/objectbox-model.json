@@ -1,0 +1,147 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3454177818192397849",
+      "lastPropertyId": "12:5988745153641487082",
+      "name": "CustomExerciseEntity",
+      "properties": [
+        {
+          "id": "1:1517328490248765680",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4846707958221862591",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:5746268119788857536",
+          "name": "bodyPart",
+          "type": 9
+        },
+        {
+          "id": "4:3329262354374424790",
+          "name": "equipment",
+          "type": 9
+        },
+        {
+          "id": "5:1633506358054578370",
+          "name": "target",
+          "type": 9
+        },
+        {
+          "id": "6:6473234990712051645",
+          "name": "muscleGroup",
+          "type": 9
+        },
+        {
+          "id": "7:5789713906588429853",
+          "name": "secondaryMuscles",
+          "type": 30
+        },
+        {
+          "id": "8:5254822152817642794",
+          "name": "instructionSteps",
+          "type": 30
+        },
+        {
+          "id": "9:5886014198278757996",
+          "name": "instructions",
+          "type": 9
+        },
+        {
+          "id": "10:3670981522665784767",
+          "name": "posterPath",
+          "type": 9
+        },
+        {
+          "id": "11:8135176653320661831",
+          "name": "gifPath",
+          "type": 9
+        },
+        {
+          "id": "12:5988745153641487082",
+          "name": "createdAt",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:1463707621153348412",
+      "lastPropertyId": "3:7713731963936791745",
+      "name": "FavoriteEntity",
+      "properties": [
+        {
+          "id": "1:4596663976193160746",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6214992989229464965",
+          "name": "exerciseId",
+          "indexId": "1:6668326239515857095",
+          "type": 9,
+          "flags": 2080
+        },
+        {
+          "id": "3:7713731963936791745",
+          "name": "addedAt",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:8495128144039589943",
+      "lastPropertyId": "5:3263631657213264617",
+      "name": "RoutineEntity",
+      "properties": [
+        {
+          "id": "1:3630210799071223598",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2581289715055460004",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3853333184523503512",
+          "name": "createdAt",
+          "type": 6
+        },
+        {
+          "id": "4:2929261480237540402",
+          "name": "updatedAt",
+          "type": 6
+        },
+        {
+          "id": "5:3263631657213264617",
+          "name": "exerciseIds",
+          "type": 30
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:8495128144039589943",
+  "lastIndexId": "1:6668326239515857095",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
